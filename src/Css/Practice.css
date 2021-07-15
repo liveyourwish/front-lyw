@@ -1,0 +1,221 @@
+.hd-mdl-bx {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 3px;
+}
+
+.hd-mdl-bx > div {
+  cursor: pointer;
+  height: 70px;
+  /* background-size: cover;  HORIZONTAL SCROLL STARTS*/
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: block;
+  transition: all 0.5s ease-in;
+}
+
+.hd-mdl-bx > div:hover {
+  opacity: 0.7;
+  transform: scale(0.98);
+}
+
+.fnt-lnk{
+  height: 70px;
+  /* min-width: 50px; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* text-align: center; */
+  font-family: cursive;
+  font-size: 20px;
+  color: white;
+  text-shadow: 5px 2px 5px rgb(243, 180, 180), 10px 10px 10px rgb(230, 96, 96);
+  padding-top: 20px;
+ }
+
+.bg1 
+{
+  background-image: url('../Image/WebsitePics/Love.png');
+  animation: change 240s infinite ease-in-out;
+}
+
+@keyframes change{
+  
+0%{
+
+  background-image: url('../Image/WebsitePics/Love.png');
+  background-size: cover;
+}
+  
+
+
+  10%{
+    background-image : url('../Image/WebsitePics/Ws1.jpg');
+    background-size: cover;
+  }
+    
+ 
+  20%{
+
+  background-image: url('../Image/WebsitePics/Edu.jpg');
+  background-size: cover;
+
+  }
+  30%{
+
+    background-image: url('../Image/WebsitePics/Fic.jpg');
+    background-size: cover;
+  
+    }
+    40%{
+
+      background-image: url('../Image/WebsitePics/Fic1.jpg');
+      background-size: cover;
+    
+      }
+
+  50%{
+  background-image: url('../Image/WebsitePics/Job.jpg');
+  background-size: cover;  
+}
+  60%{
+
+    background-image: url('../Image/WebsitePics/Job1.jpg');
+    background-size: cover;
+  
+    }
+    70%{
+
+      background-image: url('../Image/WebsitePics/Po.jpg');
+      background-size: cover;
+    
+      }
+      80%{
+
+        background-image: url('../Image/WebsitePics/Po1.jpg');
+        background-size: cover;
+      
+        }
+
+        90%{
+
+          background-image: url('../Image/WebsitePics/Tra.jpg');
+          background-size: cover;
+          }
+
+ 100%{
+
+  background-image: url('../Image/WebsitePics/Tra1.jpg');
+  background-size: cover;
+}
+
+} 
+
+
+
+.bg2 {
+  background: url('../Image/WebsitePics/Vac.jpg');
+  animation: change1 240s infinite ease-in-out;
+  /* animation-delay: -40s; */
+
+}
+
+@keyframes change1{
+  
+/* 0%{
+
+  background: url('../Image/WebsitePics/Vac.jpg');
+  background-size: cover;
+
+} */
+
+  
+  9%{
+    background-image : url('../Image/WebsitePics/Tra2.jpg');
+    background-size: cover;
+ 
+  }
+    
+ 
+  15%{
+
+  background-image: url('../Image/WebsitePics/Tra3.jpg');
+  background-size: cover;
+  
+
+  }
+  22%{
+
+    background-image: url('../Image/WebsitePics/Vac1.jpg');
+  background-size: cover;
+    
+  
+    }
+    29%{
+
+      background-image: url('../Image/WebsitePics/Vac2.jpg');
+  background-size: cover;
+      
+    
+      }
+
+  35%{
+  background-image: url('../Image/WebsitePics/Ws.jpg');
+  background-size: cover;
+  
+}
+42%{
+
+    background-image: url('../Image/WebsitePics/Ws1.jpg');
+  background-size: cover;
+    
+  
+    }
+  50%{
+
+      background-image: url('../Image/WebsitePics/Ws2.jpg');
+  background-size: cover;
+      
+    
+      }
+      62%{
+
+        background-image: url('../Image/WebsitePics/Ws3.jpg');
+        
+  background-size: cover;
+      
+        }
+
+        71%{
+
+          background-image: url('../Image/WebsitePics/Ws4.jpg');
+  background-size: cover;
+          
+        
+          }
+
+ 80%{
+
+  background-image: url('../Image/WebsitePics/Love.png');
+  background-size: cover;
+ 
+}
+
+
+100%{
+
+  background-image: url('../Image/WebsitePics/Po.jpg');
+  background-size: cover;
+ 
+}
+
+
+} 
+
+
+
+
