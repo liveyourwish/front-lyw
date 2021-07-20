@@ -25,24 +25,6 @@ const AllPost = () => {
     }, []);
 
 
-
-    // const [nos, setNos] = useState()
-     
-    // const fetchNos = () => {
-    //     axios.get(`${process.env.REACT_APP_API}/posts`)
-    //         .then(response => {
-    //             console.log(response.data.length)
-    //             setNos(response.data.length)
-    //         })
-    //         .catch(error => alert('Error fetching posts'));
-    // };
-    // useEffect(() => {
-    //     fetchNos();
-    // }, []);
-
-
-
-
     const numRows = posts.length
     return (
         <>
@@ -52,9 +34,12 @@ const AllPost = () => {
                <ReactScrollableFeed>  
                <div className="al-pst-heading " > Your Wishes-Your World 
                 </div>
-
+             
                 <h4 className = "shake "><span className ="nu-wsh">Wishes {numRows}</span></h4>
 
+
+                
+               
                <div className ="spc"> </div>
                         {
                         posts.map((post, i) => (
@@ -64,7 +49,7 @@ const AllPost = () => {
                                     <Link className= "pst-fnt-stl" to={`/post/${post.slug}`}><h2><div> {renderHTML(post && post.title)}</div></h2></Link>
                                 </div>
 
-                                <div className ='al-pst-pr'>{renderHTML(post && post.content.substring(1, 50))}</div>
+                                <div className ='al-pst-pr'>{renderHTML(post && post.content.substring(0, 60))}</div>
 
                                 <p className = 'al-pst-dt'> Published on {''} <span>{new Date(post.createdAt).toLocaleString()} </span></p>
                                 {/* <p className = 'al-pst-gr'> <span><Link to= '/grab' className ='gr-fnt'>Grab Your Milestone </Link></span></p> */}

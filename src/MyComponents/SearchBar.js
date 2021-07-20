@@ -3,6 +3,7 @@ import axios from 'axios';
 import '../Css/Shape.css';
 import '../Css/Style.css';
 import { Link } from "react-router-dom";
+import renderHTML from 'react-render-html';
 
 
 class SearchBar extends Component {
@@ -17,13 +18,13 @@ class SearchBar extends Component {
         }
     }
     search(key) {
-        console.warn(key)
+        // console.warn(key)
         fetch(`${process.env.REACT_APP_API}/posts?title=`+ key)
             .then((data) => {
                 data.json()
 
                     .then((resp) => {
-                        console.warn("resp", resp)
+                        // console.warn("resp", resp)
                         
                         if(resp.length>0)
                         {
@@ -60,12 +61,13 @@ class SearchBar extends Component {
                                 <div className = 'al-pst'>
 
 
-                                       <Link to={`/post/${post.slug}`}> <h2>{post.title}</h2></Link>
-                                       </div>
-                                       <p className ='al-pst-pr'>{post.content.substring(1, 50)}</p>
+                                <Link to={`/post/${post.slug}`}><h2 className="pst-fnt-stl"> {renderHTML(post && post.title)}</h2></Link>
+                                </div>
+
+                                <p className ='al-pst-pr'>{renderHTML(post && post.content.substring(0, 100))}</p>
 
                                         <p className = 'al-pst-dt'> Published on {''} <span>{new Date(post.createdAt).toLocaleString()} </span></p>
-                                <p className = 'al-pst-gr'> <span><Link to= '/grab' className ='gr-fnt'>Grab Your Milestone </Link></span></p>
+                                {/* <p className = 'al-pst-gr'> <span><Link to= '/grab' className ='gr-fnt'>Grab Your Milestone </Link></span></p> */}
 
                                 {/* <hr /> */}
                             </div>

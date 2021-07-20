@@ -23,7 +23,7 @@ const[content, setContent] = useState('')
 
 //rich text editor handle change
 const handleContent = (event) => {
-    console.log(event);
+    // console.log(event);
     setContent(event);
 }
 
@@ -31,11 +31,11 @@ const handleContent = (event) => {
    
     const handleSubmit = event => {
         event.preventDefault();
-        console.log({ content });
+        // console.log({ content });
         axios
         .post(`${process.env.REACT_APP_API}/static`, {content})
         .then(response => {
-            console.log(response);
+            // console.log(response);
            // empty the state
            setContent({...state, content: ''});
            //show success alert
@@ -44,7 +44,7 @@ const handleContent = (event) => {
         })
       
         .catch(error =>{
-            console.log(error.response)
+            // console.log(error.response)
             alert(error.response.data.error);
         })
    

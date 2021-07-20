@@ -489,9 +489,9 @@ border-radius: 4px;
   0%{
     transform: translateY(0)
   }
-  15%{
+  /* 15%{
     transform: translateY(5px);
-  }
+  } */
     
   30%{
     transform: translateY(-25px);
@@ -500,9 +500,9 @@ border-radius: 4px;
     transform: translateY(0px);
   }
 
-  60%{
+  /* 60%{
     transform: translateY(5px);
-  }
+  } */
     
   75%{
     transform: translateY(-25px);
@@ -514,8 +514,10 @@ border-radius: 4px;
 
 
 }
-
-
+.acm-wsh{
+ flex:float;
+ color:white;
+}
 
 
 
@@ -531,7 +533,6 @@ border-radius: 4px;
 padding: 1px 0px 0px 0px;
 /* margin: 20px; */
 /* border: 1px solid grey; */
-
 
 }
   
@@ -551,7 +552,7 @@ padding: 10px 10px 10px 10px;
 
 .pst-fnt-stl{
 /* text-decoration: none; */
-color:rgb(38, 0, 255);
+color:white;
 }
 
 
@@ -579,8 +580,10 @@ color:rgb(38, 0, 255);
 margin: 30px 0px 10px 0px;
 }
 .sp-fnt-stl{
-  color:rgb(38, 0, 255);
+  color:white;
 }
+
+
 
 
 /* grab your milestone style */
@@ -599,8 +602,12 @@ margin-top: 10px;
     
 }
 
+/* Everysection style */
+.mn-ht{
+min-height: 100vh;
 
 
+}
 
 
 
@@ -648,8 +655,9 @@ box-shadow: 0 0 5px 0 rgba(0,0,0, .5);
   border-right: 1px solid #666;
   border-radius:4px;
   background-color:rgb(185, 181, 181);
-  color:white;
-  /* font-size: 28px; */
+  color:black;
+  font-weight: bolder;
+  /* font-size: 50px; */
   /* padding: 8px 16px 8px 16px; */
   /* width: 100%; */
  

@@ -36,18 +36,24 @@ export const Create = () => {
 
 //rich text editor handle change
     const handleTitle = (event) => {
-        console.log(event);
+        // console.log(event);
         setTitle(event);
     }
 
 const[content, setContent] = useState('')
+const [disable, setDisable] = useState(true);
 
 
 //rich text editor handle change
 const handleContent = (event) => {
-    console.log(event);
+    // console.log(event);
+    // console.log(content.length);
     setContent(event);
+    setDisable(content.length < 99)
 }
+
+const charNum = content.length;
+
 
 
     //destrucutre values from state       
@@ -63,20 +69,20 @@ const handleContent = (event) => {
 
     const handleSubmit = event => {
         event.preventDefault();
-        console.log({ title, content });
+        // console.log({ title, content });
         axios
         .post(`${process.env.REACT_APP_API}/post`, {title, content})
         .then(response => {
-            console.log(response);
+            // console.log(response);
            // empty the state
            setState({...state,title: '', content: ''});
            //show success alert
-           alert(`Post titled ${response.data.title} is created`);
+        //    alert(`Post submitted.`);
            window.location.reload();
         })
       
         .catch(error =>{
-            console.log(error.response)
+            // console.log(error.response)
             alert(error.response.data.error);
         })
    
@@ -121,13 +127,13 @@ mystyle.current.focus()
                         className='pg'
                         ref={mystyle}
                         />
-<caption className="cp-stl">Min 200 characters</caption>
+<caption className="cp-stl"> {charNum} Characters | Min 100 characters</caption>
  </div >
  
                    
                    
                         <div className='hd'>
-                        <ReactScrollableFeed>    <button className ='btn-pb'>Publish</button></ReactScrollableFeed>
+                        <ReactScrollableFeed> <button disabled={disable} className ='btn-pb'>Publish</button></ReactScrollableFeed>
                     </div>
 
 

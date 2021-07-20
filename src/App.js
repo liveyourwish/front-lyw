@@ -9,6 +9,7 @@ import SearchBarButton from "./MyComponents/SearchBarButton";
 import { StartWriting } from "./MyComponents/StartWriting";
 import { StartWritingButton } from "./MyComponents/StartWritingButton";
 import { Create } from "./MyComponents/Create";
+import AccomWish from "./MyComponents/AccomWish";
 import PageHeader from "./MyComponents/PageHeader";
 import Education from "./MyComponents/Education";
 import Family from "./MyComponents/Family";
@@ -29,6 +30,7 @@ import About from "./MyComponents/About";
 import Terms from "./MyComponents/Terms";
 import { Suggestion } from "./MyComponents/Suggestion";
 import ToBottomScroll from "./MyComponents/Utils/ToBottomScroll";
+import ScrollButton from "./MyComponents/Utils/ToTopScroll";
 import { Fragment } from 'react';
 
 
@@ -52,6 +54,7 @@ const App = () => {
                 <StartWriting />
                 <StartWritingButton />
                 <PageHeader />
+                {/* <AccomWish/> */}
                 <AllPost />
               </Fragment>)
           }}></Route>
@@ -270,7 +273,7 @@ const App = () => {
 
 
         </Switch>
-
+        <ScrollButton/>
         <Footer />
 
 
