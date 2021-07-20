@@ -36,7 +36,7 @@ const Friends = () => {
                                 <Link to={`/post/${post.slug}`}><h2> {renderHTML(post && post.title)}</h2></Link>
                                 </div>
 
-                                <p className ='al-pst-pr'>{renderHTML(post && post.content.substring(0, 100))}</p>
+                                <p className ='al-pst-pr'>{renderHTML(post && post.content)}</p>
 
 
                                 <p className = 'al-pst-dt'> Published on {''} <span>{new Date(post.createdAt).toLocaleString()} </span></p>
