@@ -49,7 +49,7 @@ const handleContent = (event) => {
     // console.log(event);
     // console.log(content.length);
     setContent(event);
-    setDisable(content.length < 99)
+    setDisable(content.length < 12)
 }
 
 const charNum = content.length;
@@ -127,7 +127,7 @@ mystyle.current.focus()
                         className='pg'
                         ref={mystyle}
                         />
-<caption className="cp-stl"> {charNum} Characters | Min 100 characters</caption>
+{/* <caption className="cp-stl"> {charNum} Characters | Min 100 characters</caption> */}
  </div >
  
                    
